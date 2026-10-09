@@ -1,0 +1,1 @@
+# firefox-dark-mode
