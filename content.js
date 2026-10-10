@@ -1,11 +1,11 @@
 (() => {
-  const STORAGE_KEY = "firefox-dark-mode";
+  const STORAGE_KEY = "cyotec-dark-mode";
   const FILTERS = ["", "brightness(50%)", "invert(90%) hue-rotate(180deg)"];
 
   const apply = (state) => {
     const root = document.documentElement;
     if (root) {
-      root.dataset.firefoxDarkMode = String(state);
+      root.dataset.cyotecDarkMode = String(state);
       root.style.filter = FILTERS[state];
     }
   };
@@ -32,7 +32,7 @@
 
   browser.runtime.onMessage.addListener((message) => {
     if (message?.type !== "toggle") return;
-    const current = Number(document.documentElement.dataset.firefoxDarkMode) || 0;
+    const current = Number(document.documentElement.dataset.cyotecDarkMode) || 0;
     const next = (current + 1) % FILTERS.length;
     write(next);
     apply(next);

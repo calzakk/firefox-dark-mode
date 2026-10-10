@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "en-US": "Toggle page brightness and colour inversion"
+  },
+  "version": { "license": "MIT" },
+  "categories": { "firefox": ["appearance"] },
+  "requires_payment": false,
+  "homepage": {
+    "en-US": "https://github.com/calzakk/firefox-dark-mode"
+  }
+}
