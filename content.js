@@ -1,6 +1,6 @@
 (() => {
   const STORAGE_KEY = "cyotec-dark-mode";
-  const FILTERS = ["", "brightness(50%)", "invert(90%) hue-rotate(180deg)"];
+  const FILTERS = ["", "brightness(75%)", "brightness(50%)", "invert(90%) hue-rotate(180deg)"];
 
   const apply = (state) => {
     const root = document.documentElement;
@@ -13,7 +13,7 @@
   const read = () => {
     try {
       const state = Number(localStorage.getItem(STORAGE_KEY));
-      return state === 1 || state === 2 ? state : 0;
+      return 1 <= state && state < FILTERS.length ? state : 0;
     } catch {
       return 0;
     }
